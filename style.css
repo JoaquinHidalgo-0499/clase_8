@@ -13,7 +13,6 @@ img {
     width: 90%;
     margin: 0 auto;
 }
-/* index */
 .banner {
     background-image: url('img/R.jpeg');
     background-repeat: no-repeat;
@@ -26,13 +25,26 @@ img {
 }
 
 .grid {
-    display: grid;
-    text-align: center;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 20px;
+    display: flex;
+    justify-content: space-between;
 }
 
-/*  */
+/* Estilos para cada contenedor .cont_panel */
+.cont_panel {
+    padding: 10px;
+   text-align: center;
+    max-width: 50%; 
+   
+}
+.cont_panel video {
+    width: 100%;
+    height: 50%; 
+    object-fit: cover; 
+}
+.cont_panel p{
+    margin: 10px;
+    padding: 20px;
+}
 .form{
    
     background-color: var(--primario);
@@ -54,4 +66,49 @@ label{
     width: 100%;
     border: var(--primario) solid 1px;
     border-radius: 9px;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    background-color: #35bae7;
+    color: #fff;
+}
+.cursos{
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    grid-template-rows: repeat(2,2fr);
+    justify-items: center;
+    margin: 20px;
+    padding: 15px;
+}
+.items{
+    margin: 10px;
+    padding: 10px;
+    width: 100px;
+    background-color: #17b8ec;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.footer {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    align-items: center;
+    
+}
+.footer > div{
+    padding-inline: 30px;
+}
+@media screen and (max-width: 768px) {
+    .footer {
+        justify-content: flex-start; 
+    }
+    .footer > div {
+        flex-basis: 100%;
+        padding: 5px;
+    }
 }
